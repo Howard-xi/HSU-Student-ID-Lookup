@@ -32,7 +32,7 @@ public class StudentDB {
 
     public void addStudent(Student s) {
         if (binarySearch(s.studentId) != -1) {
-            System.out.println("Error: Student ID " + s.studentId + " already exists.");
+            System.out.println("Student ID " + s.studentId + " already exists.");
             return;
         }
         students.add(s);
@@ -43,7 +43,7 @@ public class StudentDB {
     public void removeStudent(int studentId) {
         int idx = binarySearch(studentId);
         if (idx == -1) {
-            System.out.println("Error: Student ID " + studentId + " not found.");
+            System.out.println("Student ID " + studentId + " not found.");
         } else {
             Student removed = students.remove(idx);
             System.out.println("Student " + removed.name + " removed successfully.");
